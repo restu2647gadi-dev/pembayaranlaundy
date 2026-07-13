@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Laundry - Pembayaran QRIS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Kasir Laundry QRIS</h2>
+
+    <label>Nama Pelanggan</label>
+    <input type="text" id="nama">
+
+    <label>Jenis Layanan</label>
+    <select id="layanan">
+        <option value="5000">Cuci Kering - Rp5.000/Kg</option>
+        <option value="7000">Cuci Setrika - Rp7.000/Kg</option>
+        <option value="10000">Express - Rp10.000/Kg</option>
+    </select>
+
+    <label>Berat Laundry (Kg)</label>
+    <input type="number" id="berat">
+
+    <button onclick="hitungTotal()">
+        Hitung Total
+    </button>
+
+    <div id="struk"></div>
+
+    <div id="qris" style="display:none;">
+
+        <h3>Pembayaran QRIS</h3>
+
+        <img src="Cuplikan layar 2026-07-07 084411.png" alt="QRIS">
+
+        <h2 id="nominal"></h2>
+
+        <button onclick="bayarQRIS()">
+            Konfirmasi Pembayaran
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
